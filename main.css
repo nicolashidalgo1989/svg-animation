@@ -1,3 +1,6 @@
+figure{
+    float:left
+}
 svg{
     width:200px;
     height:120px;
@@ -15,6 +18,16 @@ svg{
 }
 .path.dash{ 
     stroke-dasharray:30; 
+}
+.circle{
+    stroke-width:5px;
+    stroke: white;
+    animation: dash 1.5s infinite;
+    stroke-dasharray:300; /*total linear lenght*/
+    stroke-dashoffset: 0;
+}
+.circle.dash{
+    stroke-dasharray:10;
 }
 @keyframes dash{
     from{
