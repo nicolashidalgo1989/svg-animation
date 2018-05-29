@@ -1,16 +1,19 @@
 figure{
-    float:left
+    float:left;
+    margin:30px;
 }
 svg{
     width:200px;
     height:120px;
-    background:black;
+    background:white;
 }
 .path{ 
     stroke-dasharray:320; /*total linear lenght*/
     stroke-dashoffset: 0;
     animation: dash 1.5s infinite;
     stroke-width:5px;
+    stroke:black;
+    fill: none;
 }
 .path.round{  
     stroke-linecap:round;
@@ -21,10 +24,11 @@ svg{
 }
 .circle{
     stroke-width:5px;
-    stroke: white;
+    stroke: black;
     animation: dash 1.5s infinite;
     stroke-dasharray:300; /*total linear lenght*/
     stroke-dashoffset: 0;
+    fill: none;
 }
 .circle.dash{
     stroke-dasharray:10;
@@ -32,7 +36,8 @@ svg{
 .rect{
     width:100px;
     height:50px;
-    stroke:white;
+    stroke:black;
+    fill: none;
     stroke-width:5px;
     animation: dash 1.5s infinite;
     stroke-dasharray:300;
@@ -42,11 +47,41 @@ svg{
 .rect.dash{
     stroke-dasharray:30;
 }
+.triangle{
+    width:100px;
+    height:90px;
+    margin:0 auto;
+    display:block;
+    stroke:black;
+    fill: none;
+    stroke-width:5px;
+    animation: dash 1.5s infinite;
+    stroke-dasharray:400;
+    stroke-dashoffset:0;
+}
+.triangle__rotate{
+    width:100px;
+    height:90px;
+    stroke:black;
+    fill: none;
+    stroke-width:5px; 
+    animation: rotate 1.5s infinite;  
+}
 @keyframes dash{
     from{
         stroke-dashoffset:320;
     }
     to{
         stroke-dashoffset:0;
+    }
+}
+@keyframes rotate{
+    from{
+        transform: translate(15px,0px);
+        transform: rotate(10deg);
+    }
+    to{
+        transform: translate(15px,0px);
+        transform: rotate(0deg);
     }
 }
