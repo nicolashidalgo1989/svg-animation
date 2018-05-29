@@ -29,6 +29,19 @@ svg{
 .circle.dash{
     stroke-dasharray:10;
 }
+.rect{
+    width:100px;
+    height:50px;
+    stroke:white;
+    stroke-width:5px;
+    animation: dash 1.5s infinite;
+    stroke-dasharray:300;
+    stroke-dashoffset:0;
+    margin: 20 auto;
+}
+.rect.dash{
+    stroke-dasharray:30;
+}
 @keyframes dash{
     from{
         stroke-dashoffset:320;
