@@ -1,0 +1,26 @@
+svg{
+    width:200px;
+    height:120px;
+    background:black;
+}
+.path{ 
+    stroke-dasharray:320; /*total linear lenght*/
+    stroke-dashoffset: 0;
+    animation: dash 1.5s infinite;
+    stroke-width:5px;
+}
+.path.round{  
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.path.dash{ 
+    stroke-dasharray:30; 
+}
+@keyframes dash{
+    from{
+        stroke-dashoffset:320;
+    }
+    to{
+        stroke-dashoffset:0;
+    }
+}
